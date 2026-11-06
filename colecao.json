@@ -28,6 +28,7 @@
               "    properties: { id: { type: \"number\" }, name: { type: \"string\" }, email: { type: \"string\" } }",
               "  }",
               "  pm.response.to.have.jsonSchema(schema)",
+              "pm.test(\"Tempo de resposta menor que 2000ms\", function () { pm.expect(pm.response.responseTime).to.be.below(2000); });",
               "})"
             ]
           }
